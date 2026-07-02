@@ -1,0 +1,10 @@
+{
+  "plugin": "SatScanner",
+  "image": "dreamos",
+  "package_type": "deb",
+  "latest_version": "1.4.0",
+  "build": "r1",
+  "download_url": "https://github.com/xFayez95/satscanner/releases/latest/download/satscanner-dreamos.deb",
+  "installer_url": "https://xfayez95.github.io/satscanner/installer.sh",
+  "changelog_url": "https://xfayez95.github.io/satscanner/changelog.txt"
+}

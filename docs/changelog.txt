@@ -1,0 +1,8 @@
+SatScanner 1.4.0-r1
+
+- SDT-based transponder scanner (builds correct service references from the SDT).
+- Feed-safe: reconciles scanned refs with the box's lamedb namespace/onid.
+- Live signal finder (LED bar, SNR, lock) with reliable lock detection.
+- Scan Mode: All channels / TV channels only.
+- Last Scanned bouquet + add/replace/create/remove bouquet management.
+- Available in Service Searching, Plugin Browser, and the Extensions menu.
