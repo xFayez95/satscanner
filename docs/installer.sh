@@ -11,6 +11,15 @@ PLUGIN_NAME="SatScanner"
 PKG_URL="https://github.com/xFayez95/satscanner/releases/latest/download/satscanner-dreamos.deb"
 PKG_FILE="/tmp/satscanner-dreamos.deb"
 
+# --watch / --no-restart: the caller (the in-plugin updater) shows its own
+# "restarting" message and restarts Enigma2 itself, so don't restart here.
+NO_RESTART=0
+for arg in "$@"; do
+    case "$arg" in
+        --watch|--no-restart) NO_RESTART=1 ;;
+    esac
+done
+
 echo "==============================================="
 echo " Installing ${PLUGIN_NAME} for DreamOS"
 echo "==============================================="
@@ -42,12 +51,17 @@ fi
 
 rm -f "$PKG_FILE"
 
+echo "${PLUGIN_NAME} installed successfully."
+
+if [ "$NO_RESTART" = "1" ]; then
+    echo "Caller will restart enigma2."
+    exit 0
+fi
+
 echo "Restarting Enigma2 to load the plugin..."
 if command -v systemctl >/dev/null 2>&1; then
     systemctl restart enigma2 2>/dev/null || killall -9 enigma2 2>/dev/null || true
 else
     killall -9 enigma2 2>/dev/null || true
 fi
-
-echo "${PLUGIN_NAME} installed successfully."
 exit 0
