@@ -1,3 +1,9 @@
+SatScanner 1.5-r0
+
+- Update check now runs on every plugin open (re-prompts if you dismissed it).
+- Fixed a crash on the "update installed" screen (modal open race).
+- Update installer shows live progress and defers the Enigma2 restart to the plugin.
+
 SatScanner 1.4.0-r1
 
 - SDT-based transponder scanner (builds correct service references from the SDT).
