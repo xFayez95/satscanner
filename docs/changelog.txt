@@ -1,3 +1,9 @@
+SatScanner 1.6-r0
+
+- Live Feed integration: when opened from the Live Feed plugin, scan results are added to the Live Feed bouquet and the selected service plays from there.
+- Multiple services found are all added to the Live Feed bouquet; the one you pick is played.
+- Keeps the "SatScanner" title (and skips the Last Scanned bouquet) when launched by Live Feed.
+
 SatScanner 1.5-r0
 
 - Update check now runs on every plugin open (re-prompts if you dismissed it).
